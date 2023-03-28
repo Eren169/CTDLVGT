@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+struct xOy
+{
+	int Ox, Oy;
+};
+typedef struct xOy XOY;
+void NhapxOy(XOY&);
+void XuatxOy(XOY);
+
+void NhapxOy(XOY &xoy)
+{
+	printf("/nNhapOx : ");
+	scanf("%d", &xoy.Ox);
+	printf("/nNhap Oy : ");
+	scanf("%d", &xoy.Oy);
+}
+void XuatxOy(XOY xoy)
+{
+	printf("(%d,%d), &xoy.Ox, &xoy.Oy");
+}
+int main()
+{
+	XOY xoy;
+	NhapxOy(xoy);
+	XuatxOy(xoy);
+	
+	return 0;
+}
