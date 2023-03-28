@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+struct Diem
+{
+	int Ox, Oy, Oz;
+};
+typedef struct Diem DIEM;
+void NhapDiem(DIEM&);
+void XuatDiem(DIEM);
+
+void NhapDiem(DIEM &diem)
+{
+	printf("/nNhapOx : ");
+	scanf("%d",&diem.Ox);
+	printf("/nNhap Oy : ");
+	scanf("%d",&diem.Oy);
+	printf("/nNhap Oz :");
+	scanf("%d",&diem.Oz);
+}
+void XuatDiem(DIEM Diem)
+{
+	printf("(%i;%i;%i)", &Diem.Ox, &Diem.Oy, &Diem.Oz);
+}
+int main()
+{
+	Diem diem;
+	NhapDiem(diem);
+	XuatDiem(diem);
+	
+	return 0;
+}
